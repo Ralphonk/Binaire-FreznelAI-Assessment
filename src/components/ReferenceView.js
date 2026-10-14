@@ -46,9 +46,9 @@ export function renderReference(app, d) {
   ...cores.slice(offset, offset + coreSlots).map((c, i) =>
     `${cell('C' + (offset + i), 3)} ${paint('#c2ae6c', bar(c.load, 8))} ${percent(c.load)} ${d.temperature?.cores?.[offset + i] > 0 ? d.temperature.cores[offset + i] + '°' : ''}`),
   `GPU ${gpu ? safe(gpu.model).slice(0, Math.max(4, meterWidth - 4)) : 'N/A'}`,
-  `Load ${gpu?.utilizationGpu >= 0 ? percent(gpu.utilizationGpu) : 'N/A'}  Temp ${gpu?.temperatureGpu > 0 ? gpu.temperatureGpu + '°C' : 'N/A'}`,
+    `GPU Load ${gpu?.utilizationGpu >= 0 ? percent(gpu.utilizationGpu) : 'N/A'}  GPU Temp ${gpu?.temperatureGpu > 0 ? gpu.temperatureGpu + '°C' : 'N/A'}`,
   `VRAM ${gpu?.memoryUsed >= 0 ? gpu.memoryUsed + ' / ' + gpu.memoryTotal + ' MiB' : 'N/A'}`,
-  `Temp ${d.temperature?.main > 0 ? d.temperature.main + '°C' : 'N/A'}  [c] cores`];
+    `CPU Temp ${d.temperature?.main > 0 ? d.temperature.main + '°C' : 'N/A'}  [c] cores`];
   app.cpu.setContent(graph.map((line, i) => line + ' │' + (meter[i] ?? '')).join('\n') +
     `\nup ${Math.floor(d.uptime / 3600)}h ${Math.floor(d.uptime % 3600 / 60)}m   ${paint('#7e8b9a', 'CPU history / live samples')}`);
   const m = d.memory;
