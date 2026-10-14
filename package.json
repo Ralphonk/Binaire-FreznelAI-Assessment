@@ -1,0 +1,15 @@
+{
+  "name": "binaire-freznel-system-monitor",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Keyboard-driven terminal system monitor with Firebase authentication",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "start": "node --env-file-if-exists=.env src/index.js",
+    "preview": "node --env-file-if-exists=.env src/index.js --local",
+    "test": "node --test",
+    "check": "node --env-file-if-exists=.env src/index.js --check"
+  },
+  "dependencies": { "blessed": "^0.1.81", "systeminformation": "^5.31.0" }
+}
