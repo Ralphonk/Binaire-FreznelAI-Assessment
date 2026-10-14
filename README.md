@@ -2,6 +2,20 @@
 
 A Node.js terminal application inspired by the supplied system-monitor reference. Built with vanilla JavaScript classes, Blessed for terminal widgets, and systeminformation for OS data. Firebase Authentication handles email/password signup and login through its REST API. There is no browser server or hosted web URL.
 
+## Screenshots
+
+### Firebase authentication
+
+![Firebase authentication screen](docs/screenshots/binaire-assessment-auth-screen.png)
+
+### Live system dashboard
+
+![Live system dashboard](docs/screenshots/binaire-assessment-terminal-ui.png)
+
+### Process tree view
+
+![Process tree view](docs/screenshots/binaire-assessment-tree-view.png)
+
 ## Run
 
 Use Node.js 22 or newer in Windows Terminal, PowerShell, macOS Terminal or a Linux terminal.
@@ -65,7 +79,7 @@ npm run check
 - `src/utils/format.js`: terminal-safe text and metric formatting.
 - `test/`: Node built-in test runner suites.
 
-Other empty folders/configuration files came from the supplied template and are not used by this terminal application. No Vite or TypeScript build is required.
+The unused Vite and TypeScript placeholders from the supplied template were removed because this terminal application runs directly in Node.js and requires no browser build step.
 
 ## Platform limits
 
